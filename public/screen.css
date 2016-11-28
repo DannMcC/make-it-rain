@@ -1,8 +1,94 @@
 html {
-  text-size-adjust: 100%;
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  font: 16px / 1 sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100%;
+  background-color: #476739;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.caterpillar img {
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  animation-duration: 1000ms;
+  animation-name: catPill;
+  animation-iteration-count: 50;
+  animation-timing-function: ease-in-out;
+}
+
+.butterfly img {
+  position: absolute;
+  height: 50px;
+  left: 0;
+  animation-duration: 1000ms;
+  animation-name: bFly;
+  animation-iteration-count: 50;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes catPill {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1, 2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bFly {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(0.5, 1);
+  }
+
+  100% {
+    transform: scale(1,);
+  }
+}
+
+button {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 30px;
+  border: 5px solid #314727;
+  border-radius: 8px;
+  font-size: 30px;
+  font-family: 'Baloo Bhaina', cursive;
+  font-weight: bold;
+  color: #fff;
+  background-color: #5f8050;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.25), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
 }
